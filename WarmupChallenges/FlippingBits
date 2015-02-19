@@ -16,7 +16,7 @@ public class Solution {
         int size = sc.nextInt();
         
         // While there are more numbers to convert
-		while(size-- > 0) {
+	while(size-- > 0) {
 			
             long nextLong = sc.nextLong();
             String bitString = Long.toBinaryString(nextLong); // Convert to binary
@@ -40,9 +40,9 @@ public class Solution {
             
             System.out.println(flipped);
             
-		}
+	}
 		
-		sc.close();
+	sc.close();
    
     }   
 }
