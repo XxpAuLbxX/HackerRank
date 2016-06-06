@@ -123,16 +123,16 @@ unshift allows one or more elements to be added at the beginning of the list.
 ```
 In this challenge, your task is to complete three functions that take in the array arr and
 
-1. Add an element to the end of the list
-2. Add an element to the beginning of the list
-3. Add an element after a given index (position)
-4. Add more than one element after a given index (position)
+* [Add an element to the end of the list
+* [Add an element to the beginning of the list
+* [Add an element after a given index (position)
+* [Add more than one element after a given index (position)
 
 Ruby Array - Deletion
 ---------------------
 The array class has various methods of removing elements from the array.
 
-Lets look at the array
+Let's look at the array
 ```
  arr = [5, 6, 5, 4, 3, 1, 2, 5, 4, 3, 3, 3] 
 ```
@@ -164,8 +164,8 @@ Ruby Array - Selection
 ----------------------
 The array class also allows to select and return a subset of an array based on some criteria defined in a block (a block is a group of code within {} that accepts a variable and returns a value).
 
-1. Selecting elements that satisfy a given criteria
-2. Rejecting elements that satisfy a given criteria
+* [Selecting elements that satisfy a given criteria
+* [Rejecting elements that satisfy a given criteria
 ```
  > arr = [3, 4, 2, 1, 2, 3, 4, 5, 6]
  > arr.select {|a| a > 2}
@@ -231,7 +231,7 @@ hackerrank["vivmbbs"] = 200
 
 Ruby Hash - Each
 ----------------
-You have seen the control structure each used on an array. Similarly, it is available for the Hash collection, as well.
+You've seen the control structure each used on an array. Similarly, it is available for the Hash collection, as well.
 
 On Hash, it works in two ways.
 
@@ -293,6 +293,6 @@ For non-destructive selection or rejection, we can use select, reject, and drop_
 
 In this challenge, a hash object called hackerrank is already created. You have to add
 
-1. A key-value pair [543121, 100] to the hackerrank object using store
-2. Retain all key-value pairs where keys are Integers ( clue : is_a? Integer )
-3. Delete all key-value pairs where keys are even-valued.
+* [A key-value pair [543121, 100] to the hackerrank object using store
+* [Retain all key-value pairs where keys are Integers ( clue : is_a? Integer )
+* [Delete all key-value pairs where keys are even-valued.
