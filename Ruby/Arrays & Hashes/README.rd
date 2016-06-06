@@ -132,7 +132,7 @@ Ruby Array - Deletion
 ---------------------
 The array class has various methods of removing elements from the array.
 
-Let's look at the array
+Lets look at the array
 ```
  arr = [5, 6, 5, 4, 3, 1, 2, 5, 4, 3, 3, 3] 
 ```
@@ -231,7 +231,7 @@ hackerrank["vivmbbs"] = 200
 
 Ruby Hash - Each
 ----------------
-You've seen the control structure each used on an array. Similarly, it is available for the Hash collection, as well.
+You have seen the control structure each used on an array. Similarly, it is available for the Hash collection, as well.
 
 On Hash, it works in two ways.
 
