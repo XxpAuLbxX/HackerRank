@@ -11,10 +11,11 @@ User class has a method update_score.
 Your task is to iterate through each of the elements in the array using each and call the method update_score on every element.
 
 Hint
-
+```
 array.each do |user|
     # call update_score on `user` here
 end
+```
 
 Ruby Control Structures - Unless
 --------------------------------
@@ -25,15 +26,16 @@ Like the previous challenge, you are given a method scoring with an array passed
 User has two public methods, is_admin? and update_score. Your task in this challenge is to use the control structure unless and update all elements of the array who are not admins.
 
 Hint
-
+```
 unless user.is_admin?
     user.update_score
 end
+```
 or
-
+```
 user.update_score unless user.is_admin? 
 The above code is a Ruby one liner.
-
+```
 Explanation
 
 unless is the logical equivalent of if not
@@ -45,20 +47,22 @@ This is a wonderful exercise which explains the concept of infinite loops.
 "A hacker practices on HackerRank until getting to a rating of O(1) read as (Oh-one)"
 
 An infinite loop in Ruby is of the form
-
+```
 loop do
 end
+```
 Use an infinite loop and call the method coder.practice within it and break if coder.oh_one? is true.
 
 break if conditions in Ruby are of the form
-
+```
 if <condition>
     break
 end
+```
 or a one-liner
-
+```
 break if <condition>
-
+```
 Ruby Control Structures - Until
 -------------------------------
 This challenge has a beautiful one-liner answer.
