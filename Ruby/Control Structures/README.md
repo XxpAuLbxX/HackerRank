@@ -72,19 +72,20 @@ Use the until control structure.
 until is the logical equivalent of while not.
 
 Hint
-
+```
 while not <condition>
     <code>
 end
+```
 or
-
+```
 until <condition>
     <code>
 end
 or the beautiful one-liner
 
 <code> until <condition>
-
+```
 Ruby Control Structures - Case (Bonus Question)
 -----------------------------------------------
 This is a bonus question. Feel free to skip to the next challenge.
