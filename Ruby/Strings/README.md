@@ -95,13 +95,14 @@ Consider the following examples:
 More often, you'd want to extract specific portions of the string rather than individual characters. To do this, use comma separated operands between the square brackets. The first operand specifies an index (which may be negative), and the second specifies a length (which must be non-negative).
 
 Consider the example below:
-
+```
 > str[0,4] # first four characters
 "Hell"
 > str[6,3] # 3 characters starting from index 6 ( 0-indexing )
 "Wor"
 > str[-1, 1] # 1 character starting from the END of string
 "!"
+```
 The same examples shown above can be used for assignment / deletion of characters. We can insert characters by giving a non-empty assignment or delete characters in the range by giving an empty assignment.
 
 Consider the example below:
