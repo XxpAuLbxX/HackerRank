@@ -7,28 +7,38 @@ using namespace std;
 
 
 int main() {
-    int N, K, luck = 0, i = 0, j;
+    int N, K, luck = 0, i = 0, j, count = 0;
     cin >> N >> K;
     int L[N], T[N], Lose[K] = {0};
-    cout << Lose[0] << Lose[1];
     while(cin >> L[i] >> T[i]) {
         j = 1;
+        // if unimportant, automatically lose for luck
         if(T[i] == 0) {
             luck += L[i];
-        } else if(Lose[0] < L[i]) {
+        // Lose arr has lowest value at front, compare and swap in loop
+        } else if((Lose[0] < L[i]) && (K != 0)) {
+            // if array is full, first value must be dropped
+            if(count >= K)
+                luck -= Lose[0];
             while(j < K) {
                 if(Lose[j] < L[i]) {
-                    Lose[j] = Lose[j-1]; // shift
+                    Lose[j-1] = Lose[j]; // shift to front
                 } else {
-                    Lose[j-1] = L[i];
+                    Lose[j-1] = L[i]; // insert value and quit
                     break;
                 }
                 j++;
             }
+            // for first iteration to put value at end of array
+            if(j == K) {
+                  Lose[K-1] = L[i];  
+            }
+            count++;
         }
         i++; 
     }
     i = 0;
+    // Add luck from highest skippable contests
     while(i < K) {
         luck += Lose[i];
         i++;
