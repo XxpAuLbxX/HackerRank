@@ -23,15 +23,15 @@ int main() {
             while(j < K) {
                 if(Lose[j] < L[i]) {
                     Lose[j-1] = Lose[j]; // shift to front
+                    // if largest value
+                    if(j == K-1) {
+                        Lose[K-1] = L[i];  
+                    }
                 } else {
                     Lose[j-1] = L[i]; // insert value and quit
                     break;
                 }
                 j++;
-            }
-            // for first iteration to put value at end of array
-            if(j == K) {
-                  Lose[K-1] = L[i];  
             }
             count++;
         }
