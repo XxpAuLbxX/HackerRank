@@ -1,5 +1,5 @@
 f :: Int -> [Int] -> [Int]
-f n arr = replicate f
+f n arr = concatMap (replicate n) arr
 
 -- This part handles the Input and Output and can be used as it is. Do not modify this part.
 main :: IO ()
