@@ -14,7 +14,7 @@ int main() {
     // create array 
     for(int i = 0; i < n; i++)
         cin >> a[i];
-    // adjust array to be in bounds
+    // adjust array after shift
     for(int i = 0; i < q; i++) {
         cin >> index;
         if(index-k >= 0) {
