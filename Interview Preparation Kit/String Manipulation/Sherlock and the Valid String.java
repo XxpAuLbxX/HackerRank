@@ -12,7 +12,7 @@ public class Solution {
     static String isValid(String s) {
         int len = s.length();
         int cnt = 0, chk = 0;
-        Map<Character, Integer> freq = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> freq = new HashMap<Character, Integer>();
         // Collect frequencies
         for(char c : s.toCharArray()) {
             freq.put(c, freq.getOrDefault(c, 0) + 1);
@@ -27,16 +27,20 @@ public class Solution {
                 if(value == chk) {
                     continue;
                 // If one off, char can be removed once
-                } else if(value == chk + 1) {
+                } else if(value == chk + 1 || value == chk - 1) {
                     cnt++;
                 // Can remove if only one char
                 } else if(value == 1) {
+                    cnt++;
+                // Check if first value was 1, and update
+                } else if(value > 1 && chk == 1) {
+                    chk = value;
                     cnt++;
                 // Greater than one off
                 } else {
                     return "NO";
                 }
-                if(cnt > 1) {
+                if(cnt == 2) {
                     return "NO";
                 }
             }
