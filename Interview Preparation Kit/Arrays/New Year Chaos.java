@@ -11,15 +11,16 @@ public class Solution {
     // Complete the minimumBribes function below.
     static void minimumBribes(int[] q) {
         int bribes = 0;
-        for(int i = 0; i < q.length; i++) {
+        // Check how many people bribed each person
+        for(int i = q.length - 1; i >= 0; i--) {
             // Check if too many swaps
             if(q[i] - i - 1 > 2) {
                 System.out.println("Too chaotic");
                 return;
             }
-            // Count number of times person has passed
-            for(int j = i + 1; j < q.length; j++) {
-                if(q[i] > q[j]) {
+            // Use window of person + 2 to find people who bribed q[i]
+            for(int j = Math.max(0, q[i] - 2); j < i; j++) {
+                if(q[j] > q[i]) {
                     bribes++;
                 }
             }
@@ -27,7 +28,7 @@ public class Solution {
         System.out.println(bribes);
 
     }
-
+    
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
